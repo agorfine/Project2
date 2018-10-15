@@ -1,54 +1,108 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 2: React
-#### Overview
+# Project Overview
 
-Let's kick it up a notch and build a modular and modern front end application using React!
+## Project Schedule
 
-Like with project one, our Unit 2 project is a chance to be creative and build something you can be proud of.
+This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
-You will be working individually for this project, but we'll be guiding you along the process and helping as you go.
+You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
-As part of this project, you'll be required to show your project to your instructors and classmates in a five minute presentation in front of the class. Your goal for this presentation is to extract the most important aspects of what went into building your project into easy-to-use language and practice speaking about your code.
-
-Show us what you've got!
-
-## Requirements
-
-#### Your website must:
-
-- Be a working, interactive, React application.
-- Include one of the following:
-  - Pull data into the application using an API
-  - Persist data using localStorage and have two distinct "views" in your application using conditional rendering
-- Have at least 3 separate components, each with their own folder in your application.
- - Be build using Create React App Minimal.
-- Be deployed via GitHub, Firebase.
-- Be styled with CSS.
-- Use flexbox layout...or learn something new like CSS Grid.
+|  Day | Deliverable | Status
+|---|---| ---|
+|Day 1| Project Description | Complete
+|Day 2| Wireframes / Priority Matrix / Functional Components | Complete
+|Day 3| Home Page | Incomplete
+|Day 4| Pseudocode / JSX MVP | Incomplete
+|Day 5| Full Working App / Post MVP  | Incomplete
+|Day 6| Present | Incomplete
 
 
-#### Your code must:
+## Project Description
 
-- Be properly indented
-- Be written with semantic, camelCase JavaScript variable names
-- Be written with kebab-case (dashes) CSS class names
-- No console.log() or commented out code in final version
-- Only React for dom manipulation
+This app assists users in planning their trip to Disney World. Users will be able to select a park, and then favorite rides and restaurants within it. The app layout has two main pages, the home page and the park page. The home page will introduce the website, and allow users to click on each of the four parks. Once the user clicks a park, they will be routed to that park's page. The park page will show a map of the park, and a list of rides and restaurants fetched from an API. The user will then be able to favorite rides and restaurants. The app will include a button to allow users to see their favorited items. 
 
-#### Your README must:
+## Wireframes
 
-- Name of your project
-- Brief description of the project
-- A link to your deployed project
+Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
-## Necessary Deliverables
+- [Wireframe1-Home-Page-Layout](https://res.cloudinary.com/drsaojfyp/image/upload/v1539642797/S8vZXqCYQueiHU3wfRCVCg.jpg)
+- [Wireframe2-Park-Page-Layout](https://res.cloudinary.com/drsaojfyp/image/upload/v1539642848/063EVTEgTOC5PXaPJNcXmQ.jpg)
 
-#### For the proposal:
-- A collection of wireframes - hand-drawn or digitally created - outlining the important pages of your site, as well as the critical states of your project.
-- A proposal including:
-	- A description of the project you'll be building with the objective described in non-technical language.
-	- An explanation of the major problems you plan to face while implementing this app.
-	- An explanation of how you foresee yourself solving the aforementioned problems.
-  - If using an API, a link to the API you plan to use
 
-#### For the project:
-- A git repository hosted on GitHub, with a link to your hosted project, and frequent commits dating back to the very beginning of the project (YOUR APP SHOULD BE LOCATED IN A SEPARATE STANDING REPO. DO NOT build your app in this repository. YOU MUST initiate a new repo on your GitHub account.)
+## Priority Matrix
+
+Include a full list of features that have been prioritized based on the `Time and Importance` Matix.  
+
+- [Prority-Matrix](https://res.cloudinary.com/drsaojfyp/image/upload/v1539642897/n_a78pQjSJGBg9QPCThQ_w.jpg)
+
+### MVP/PostMVP - 5min
+
+The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+
+#### MVP 
+- Home Page (including: buttons for park/routes to park page, favorite filter)
+- Park Page (including: map of park, lis of rides, lis of restarurants, favorite button, favorite filter)
+- CSS & Styling
+
+#### PostMVP 
+- Mobile responsive
+- Finding another API to include descriptions of games and restaurants
+
+
+## React Architectural Design
+
+Define the the React components and the architectural design of your app.
+
+- [React-Architectural-Design](https://res.cloudinary.com/drsaojfyp/image/upload/v1539645392/AQAB7KuMTTa4A5_ufXs5Kg.jpg)
+
+
+## Functional Components
+
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
+
+| Component | Description | 
+| --- | :---: |  
+| Home Page | This is a stateful component. It includes the state of the favorites (will be passed down as props). It will fetch the API (will be passed down as props). It will include a toggle function (will be passed down as props). Will include click function to route to each park page.| 
+| Favorite Bar | This is a stateful component. It includes the state of the filter (changes from all to faves). It will include an onClick to see the favorites selected. Will show list of rides rows and restaurant rows favorited. | 
+| Park Page | This is a stateless component. Includes rides rows component, restaurant row component, and favorite button component. | 
+| Rides Rows | This is a stateless component. Receive props from home page listing rides. | 
+| Restaurant Rows | This is a stateless component. Receive props from home page listing restaurants. | 
+| Favorite Button | This is a stateless component. Receive props from home page handle toggle function. A condition is used to change class with onclick. | 
+
+
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
+
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
+| Total | H | 6hrs| 5hrs | 5hrs |
+
+## Helper Functions
+Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
+
+| Function | Description | 
+| --- | :---: |  
+| Capitalize | This will capitalize the first letter in a string of text | 
+
+## Additional Libraries
+ Use this section to list all supporting libraries and thier role in the project. 
+
+## Code Snippet
+
+Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
+
+```
+function reverse(string) {
+  // here is the code to reverse a string of text
+}
+```
+
+## Change Log
+ Use this section to document what changes were made and the reasoning behind those changes.  
+
+## Issues and Resolutions
+ Use this section to list of all major issues encountered and their resolution.
+
+#### SAMPLE.....
+**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
+**RESOLUTION**: Missing comma after first object in sources {} object
