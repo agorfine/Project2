@@ -73,9 +73,24 @@ Time frames are also key in the development cycle.  You have limited time to cod
 
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| Whire Framing | H | 3hrs| 3.5hrs | 4hrs |
+| Working with API | H | 2hrs| hrs | hrs |
+| Button for Park | H | 4hrs| hrs | hrs |
+| Map of Park | L | 1hr| hrs | hrs |
+| Rides-Fetching API | H | 2hrs| hrs | hrs |
+| Rides-Implementing Data | H | 2hrs| hrs | hrs |
+| Restaurants-Fetching API | H | 2hrs| hrs | hrs |
+| Restaurants-Implementing Data | H | 2hrs| hrs | hrs |
+| Favorite Button- Click Function | H | 3hrs| hrs | hrs |
+| Favorite Button- Changing Class Conditional | M | 4hrs| hrs | hrs |
+| Favorite Filter- Change State to Show Fave | H | 3hrs| hrs | hrs |
+| Favorite Filter- Show Rides | M | 2hrs| hrs | hrs |
+| Favorite Filter- Show Restaurants | M | 2hrs| hrs | hrs |
+| CSS & Styling- Home Page | H | 3hrs| hrs | hrs |
+| CSS & Styling- Park Page | H | 3hrs| hrs | hrs |
+| CSS & Styling- Favorite Button | M | 2hrs| hrs | hrs |
+| CSS & Styling- Showing Fave | H | 4hrs| hrs | hrs |
+| Total | H | 38hrs| hrs | hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
