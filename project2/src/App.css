@@ -11,16 +11,17 @@
 }
 
 .title {
-  font-size: 60px;
+  font-size: 90px;
   color: #c0e1d5;
   text-shadow:
-     -1px -1px 0 rgba(32, 34, 98),
-    1px -1px 0 rgba(32, 34, 98),
-    -1px 1px 0 rgba(32, 34, 98),
-    1px 1px 0 rgba(32, 34, 98);
+     -2px -2px 0 rgba(32, 34, 98),
+    2px -2px 0 rgba(32, 34, 98),
+    -2px 2px 0 rgba(32, 34, 98),
+    2px 2px 0 rgba(32, 34, 98);
   align-self: center;
   font-family: disney;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .intro {
@@ -34,7 +35,6 @@
     -.5px .5px 0 rgba(32, 34, 98),
     .5px .5px 0 rgba(32, 34, 98);
   font-weight: bold;
-  font-family: disney2;
 }
 
 
