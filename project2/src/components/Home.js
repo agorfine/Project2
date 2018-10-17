@@ -6,16 +6,15 @@ class Home extends Component {
 
 	render () {
 
-
 		return(
-			<div>
-				<h1>Disney World Trip Adviser</h1>
+			<div className="homePage">
+				<h1 className="title">Disney World Trip Adviser</h1>
                 <p className = "intro">Help create a magical trip for you and your family! View all of the rides and restaurants in Disney World, and make your trip happen with ease.</p>
                 <div className ='routeButton'>
-	                <button className = 'mkButton'><Link to="/MagicKingdom"> Magic Kingdom</Link></button>
-	                <button className = 'epcotButton'><Link to="/Epcot"> Epcot</Link></button>
-	                <button className = 'akButton'><Link to="/AnimalKingdom"> Animal Kingdom</Link></button>
-	                <button className = 'hsButton'><Link to="/HollywoodStudios"> Hollywood Studios</Link></button>
+	                <button className = 'mkButton'><Link to="/MagicKingdom" className='mkLink'> Magic Kingdom</Link></button>
+	                <button className = 'epcotButton'><Link to="/Epcot" className='epcotLink'> Epcot</Link></button>
+	                <button className = 'akButton'><Link to="/AnimalKingdom" className='akLink'> Animal Kingdom</Link></button>
+	                <button className = 'hsButton'><Link to="/HollywoodStudios" className='hsLink'> Hollywood Studios</Link></button>
      			</div>
 			</div>	
 		)

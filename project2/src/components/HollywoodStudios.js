@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-const HollywoodStudios = (props) => {
-	return <p> This is HS...</p>
+class HollywoodStudios extends Component {
+
+	updateHistory () {
+		this.props.history.push('./')
+		this.props.show = true
+	}
+
+
+	render () {
+		// const land = this.props.data.orlando.parks
+		// console.log(land)
+
+		return(
+			<div>
+				<button className ="homeButton" onClick={() => this.props.history.push('/')}>Home </button>
+				<div></div>
+			</div>	
+		)
+	}
 }
-
 export default HollywoodStudios;

@@ -4,32 +4,73 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1539739182/Free-Backgrounds-Disney.png');
+  background-size: cover;
+  height: 740px;
 }
 
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-right: 40px;
-  margin-left: 40px;
-  padding: 10px;
+.title {
+  font-size: 60px;
+  color: #c0e1d5;
+  text-shadow:
+     -1px -1px 0 rgba(32, 34, 98),
+    1px -1px 0 rgba(32, 34, 98),
+    -1px 1px 0 rgba(32, 34, 98),
+    1px 1px 0 rgba(32, 34, 98);
+  align-self: center;
 }
+
+.intro {
+  margin: 10px 30px;
+  font-size: 24px;
+  color: #c0e1d5;
+  width: 85%;
+  text-shadow:
+    -.5px -.5px 0 rgba(32, 34, 98),
+    .5px -.5px 0 rgba(32, 34, 98),
+    -.5px .5px 0 rgba(32, 34, 98),
+    .5px .5px 0 rgba(32, 34, 98);
+  font-weight: bold;
+}
+
 
 a {
   text-decoration: none;
+  font-size: 20px;
 }
 
-.buttons {
+.mkLink {
+  padding: 88px 24px;
+}
+
+.epcotLink {
+  padding: 88px 68px;
+}
+
+.akLink {
+  padding: 88px 20px;
+}
+
+.hsLink {
+  padding: 88px 10px;
+}
+
+.routeButton {
+  align-self: flex-end;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   text-align: center;
   flex-wrap: wrap;
-  margin-top: 60px;
+  width: 60%;
 }
 
 .mkButton, .epcotButton, .akButton, .hsButton {
   height: 200px;
-  width: 200px;
-  margin: 20px;
+  width: 250px;
+  margin: 30px 24px;
+  border-radius: 10px;
+}
+
+.mkButton {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1539700910/disneyworld1.jpg);
 }
