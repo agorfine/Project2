@@ -1,29 +1,27 @@
 import React, { Component } from 'react';
 
 
-class RidesRow extends Component {
+
+class RestaurantRow extends Component {
 
 
 	render () {
 
-		let rides = this.props.land.attractions.map((ride, i) => {
-			return <li key = {i}>{ride.name}</li>
+		let restaurants = this.props.land.dining.map((restaurant, i) => {
+			return <li key = {i}>{restaurant.name}</li>
 		})
 
 		return(
 			<div>
-				
 				<div className = 'land'>{this.props.land.name}</div>
-				
 				<div>
 					<ul className = 'rides'>	
-						{rides}
+						{restaurants}
 					</ul>
 				</div>	
-			
-			</div>
+			</div>	
 		)
 	}
 }
 
-export default RidesRow;
+export default RestaurantRow;

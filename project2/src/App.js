@@ -11,7 +11,7 @@ import './App.css';
 
 class App extends Component {
   state = {
-    data: {}
+    result: {}
   }
 
   componentDidMount () {
@@ -30,6 +30,9 @@ class App extends Component {
     return (
       <div>
         <main>
+          <nav>
+
+          </nav>
           
           <Switch>
            

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import RidesRow from './RidesRow'
+import RestaurantRow from './RestaurantRow'
 
 class MagicKingdom extends Component {
 
@@ -8,24 +9,32 @@ class MagicKingdom extends Component {
 	}
 
 	render () {
-		const rides= this.props.data ? this.props.data.orlando.parks[0]: '';
-		console.log(rides)
+		const land= this.props.data ? this.props.data.orlando.parks[0]: '';
+		// console.log(rides)
 
-		const allRides = rides.map((lands) => {
-			return (
-				<RidesRow
-				lands={lands}
-				key={lands.id}
-				/>
-			)
+		const rides =land.lands.map((land, i) => {
+			return land.attractions ? <RidesRow land = {land} key = {i} /> : '';
 		})
 
+		const restaurants =land.lands.map((land, i) => {
+			return land.dining ? <RestaurantRow land = {land} key ={i} /> : '';
 
-		return(
+		})
+
+		return (
 			<div>
 				<button className ="homeButton" onClick={() => this.props.history.push('/')}>Home </button>
-				<div></div>
-			</div>	
+				<div className = 'parkPageContainer'>
+					<div className = 'ridesDiv'>
+						<div className = 'rideTitle'> Rides</div>
+						{rides}
+					</div>
+					<div className = 'restaurantDiv'>
+						<div className = 'restaurantTitle'> Restaurant</div>
+						{restaurants}
+					</div>
+				</div>
+ 			</div>
 		)
 	}
 }
