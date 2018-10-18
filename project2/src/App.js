@@ -9,9 +9,11 @@ import Home from './components/Home'
 
 import './App.css';
 
+
 class App extends Component {
   state = {
-    result: {}
+    result: {},
+    faves: []
   }
 
   componentDidMount () {
@@ -26,6 +28,24 @@ class App extends Component {
       })
   }
 
+    handleFaveToggle(film) {
+    const faves = this.state.faves.slice()
+    const ridesIndex = this.state.faves.indexOf(film)
+    console.log(ridesIndex)
+    this.setState(prevState => ({
+          faves
+      }))
+
+      if ( ridesIndex > -1 ) {
+        console.log('removing  from faves')
+        faves.splice(ridesIndex, 1)
+      } else {
+        console.log('adding  to faves')
+        // faves.push(this.state.result.orlando.parks[0].lands.attractions.name)
+      }
+      this.setState({faves})
+  }
+
   render() {
     return (
       <div>
@@ -36,10 +56,10 @@ class App extends Component {
           
           <Switch>
            
-            <Route path ="/MagicKingdom" render = {(props) => <MagicKingdom {...props} data={this.state.result}/>} />
-            <Route path ="/Epcot" render = {(props) => <Epcot {...props} data={this.state.result}/>} />
-            <Route path ="/AnimalKingdom" render = {(props) => <AnimalKingdom {...props} data={this.state.result}/>}/>
-            <Route path ="/HollywoodStudios" render = {(props) => <HollywoodStudios {...props} data={this.state.result}/>} />
+            <Route path ="/MagicKingdom" render = {(props) => <MagicKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>} />
+            <Route path ="/Epcot" render = {(props) => <Epcot {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)}/>} />
+            <Route path ="/AnimalKingdom" render = {(props) => <AnimalKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)}/>}/>
+            <Route path ="/HollywoodStudios" render = {(props) => <HollywoodStudios {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)}/>} />
             <Route path ="/" component= {Home} />
            
             <Redirect to='/' />

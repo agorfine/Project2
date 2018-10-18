@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
+import Fave from './Fave'
 
 
 class RidesRow extends Component {
 
-
 	render () {
 
 		let rides = this.props.land.attractions.map((ride, i) => {
-			return <li key = {i}>{ride.name}</li>
+			return <li key = {i} className= 'rideRow'>{ride.name} <Fave 
+							onFaveToggle = {this.props.onFaveToggle}
+          					isFave = {() => this.props.isFave()}
+          				/>
+          		</li>
 		})
 
 		return(
@@ -19,6 +23,7 @@ class RidesRow extends Component {
 					<ul className = 'rides'>	
 						{rides}
 					</ul>
+
 				</div>	
 			
 			</div>
