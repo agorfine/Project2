@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import RidesRow from './RidesRow'
 import RestaurantRow from './RestaurantRow'
 import MapMK from './MapMK'
-import Fave from './Fave'
 
 class MagicKingdom extends Component {
 

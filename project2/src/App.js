@@ -41,7 +41,7 @@ class App extends Component {
         faves.splice(ridesIndex, 1)
       } else {
         console.log('adding  to faves')
-        // faves.push(this.state.result.orlando.parks[0].lands.attractions.name)
+        faves.push(this.state.result.land)
       }
       this.setState({faves})
   }
@@ -57,9 +57,9 @@ class App extends Component {
           <Switch>
            
             <Route path ="/MagicKingdom" render = {(props) => <MagicKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>} />
-            <Route path ="/Epcot" render = {(props) => <Epcot {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)}/>} />
-            <Route path ="/AnimalKingdom" render = {(props) => <AnimalKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)}/>}/>
-            <Route path ="/HollywoodStudios" render = {(props) => <HollywoodStudios {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)}/>} />
+            <Route path ="/Epcot" render = {(props) => <Epcot {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>} />
+            <Route path ="/AnimalKingdom" render = {(props) => <AnimalKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>}/>
+            <Route path ="/HollywoodStudios" render = {(props) => <HollywoodStudios {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>} />
             <Route path ="/" component= {Home} />
            
             <Redirect to='/' />
