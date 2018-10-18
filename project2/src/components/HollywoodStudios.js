@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RidesRow from './RidesRow'
 import RestaurantRow from './RestaurantRow'
+import MapHS from './MapHS'
 
 class HollywoodStudios extends Component {
 
@@ -22,16 +23,21 @@ class HollywoodStudios extends Component {
 		})
 
 		return (
-			<div>
+			<div className = 'hollywoodStudios'>
 				<button className ="homeButton" onClick={() => this.props.history.push('/')}>Home </button>
-				<div className = 'parkPageContainer'>
-					<div className = 'ridesDiv'>
-						<div className = 'rideTitle'> Rides</div>
-						{rides}
+				<div className= 'parkContainer'>
+					<div className= 'map'>
+						<MapHS />
 					</div>
-					<div className = 'restaurantDiv'>
-						<div className = 'restaurantTitle'> Restaurant</div>
-						{restaurants}
+					<div className = 'parkPageContainer'>
+						<div className = 'ridesDiv'>
+							<div className = 'rideTitle'> Rides</div>
+							{rides}
+						</div>
+						<div className = 'restaurantDiv'>
+							<div className = 'restaurantTitle'> Restaurant</div>
+							{restaurants}
+						</div>
 					</div>
 				</div>
  			</div>

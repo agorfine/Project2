@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import RidesRow from './RidesRow'
 import RestaurantRow from './RestaurantRow'
+import MapEpcot from './MapEpcot'
 
 class Epcot extends Component {
 
@@ -22,16 +23,21 @@ class Epcot extends Component {
 		})
 
 		return (
-			<div>
+		<div className = 'epcot'>
 				<button className ="homeButton" onClick={() => this.props.history.push('/')}>Home </button>
-				<div className = 'parkPageContainer'>
-					<div className = 'ridesDiv'>
-						<div className = 'rideTitle'> Rides</div>
-						{rides}
+				<div className= 'parkContainer'>
+					<div className= 'map'>
+						<MapEpcot />
 					</div>
-					<div className = 'restaurantDiv'>
-						<div className = 'restaurantTitle'> Restaurant</div>
-						{restaurants}
+					<div className = 'parkPageContainer'>
+						<div className = 'ridesDiv'>
+							<div className = 'rideTitle'> Rides</div>
+							{rides}
+						</div>
+						<div className = 'restaurantDiv'>
+							<div className = 'restaurantTitle'> Dining</div>
+							{restaurants}
+						</div>
 					</div>
 				</div>
  			</div>

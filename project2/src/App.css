@@ -93,4 +93,49 @@ a {
 .land {
   text-align: center;
   margin: 5px;
+  font-family: disney;
+  font-size: 40px;
+  color: #225587;
+}
+
+.rides {
+  list-style: none;
+  color: #225587;
+}
+
+.ridesDiv, .restaurantDiv {
+  background-color: rgba(255, 255, 255, .7);
+  margin: 10px;
+  border-radius: 20px;
+  width: 500px;
+}
+
+.magicKingdom, .hollywoodStudios, .epcot, .animalKingdom {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1539824917/1081037-beautiful-light-blue-backgrounds-1920x1080-for-1080p.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.parkHead {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+#mkImg {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  margin-right: 20px;
+}
+
+.map {
+  margin: 10px;
+  margin-left: 20px;
 }
