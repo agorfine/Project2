@@ -7,7 +7,8 @@ class Fave extends Component {
 		e.stopPropagation()
 		// captures the event and stops bubbling up (child event listeners bubble up to parent event listeners)
 		console.log('inside handleClick')
-		this.props.onFaveToggle()
+
+		this.props.onFaveToggle(this.props.ride)
 	}
 
 	render () {
@@ -22,7 +23,7 @@ class Fave extends Component {
 				onClick = {(e) => this.handleClick(e)}
 			>
 
-  				<p className="materialIcons"></p>
+  				<p  className="materialIcons"></p>
 			</div>
 		)
 	}

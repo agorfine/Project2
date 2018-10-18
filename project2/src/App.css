@@ -190,3 +190,11 @@ a {
   height: 150px;
   margin: 10px 40px;
 }
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 20px;
+  padding-top: 10px;
+}

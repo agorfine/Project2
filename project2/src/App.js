@@ -28,9 +28,10 @@ class App extends Component {
       })
   }
 
-    handleFaveToggle(film) {
+    handleFaveToggle(ride) {
     const faves = this.state.faves.slice()
-    const ridesIndex = this.state.faves.indexOf(film)
+    const ridesIndex = this.state.faves.indexOf(ride)
+    const rideName = this.state.result.orlando.park
     console.log(ridesIndex)
     this.setState(prevState => ({
           faves
@@ -41,7 +42,8 @@ class App extends Component {
         faves.splice(ridesIndex, 1)
       } else {
         console.log('adding  to faves')
-        faves.push(this.state.result.land)
+        console.log(rideName)
+        faves.push(ride)
       }
       this.setState({faves})
   }
@@ -56,10 +58,10 @@ class App extends Component {
           
           <Switch>
            
-            <Route path ="/MagicKingdom" render = {(props) => <MagicKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>} />
-            <Route path ="/Epcot" render = {(props) => <Epcot {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>} />
-            <Route path ="/AnimalKingdom" render = {(props) => <AnimalKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>}/>
-            <Route path ="/HollywoodStudios" render = {(props) => <HollywoodStudios {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()}/>} />
+            <Route path ="/MagicKingdom" render = {(props) => <MagicKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()} fave={this.state.faves}/>} />
+            <Route path ="/Epcot" render = {(props) => <Epcot {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} fave={this.state.faves} s/>} />
+            <Route path ="/AnimalKingdom" render = {(props) => <AnimalKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} fave={this.state.faves}/>}/>
+            <Route path ="/HollywoodStudios" render = {(props) => <HollywoodStudios {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} fave={this.state.faves}/>} />
             <Route path ="/" component= {Home} />
            
             <Redirect to='/' />
@@ -71,12 +73,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-
-
-          // <Route path ="/MagicKingdom" render = {(props) => <MagicKingdom {...props} data={this.state.result.orlando}/>} />
-          //   <Route path ="/Epcot" render = {(props) => <Epcot {...props} data={this.state.result}/>} />
-          //   <Route path ="/AnimalKingdom" render = {(props) => <AnimalKingdom {...props} data={this.state.result}/>}/>
-          //   <Route path ="/HollywoodStudios" render = {(props) => <HollywoodStudios {...props} data={this.state.result}/>} />
-          //   <Route path ="/" component= {Home} />
