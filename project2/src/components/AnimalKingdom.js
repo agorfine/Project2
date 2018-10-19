@@ -32,10 +32,17 @@ function AnimalKingdom(props) {
 
 	return (
 		<div className = 'animalKingdom'>
-			<button className ="homeButton" onClick={() => props.history.push('/')}>Home </button>
+			<nav className= 'navBar'>
+						<div className= 'logo'>Walt Disney World</div>
+						<div className= 'navLink'>
+							<div className ="homeButton" onClick={() => props.history.push('/')}>Home </div>
+							<div className ="faveButton">Favorites</div>
+						</div>	
+				</nav>
+			
 			<div className= 'parkContainer'>
 				<div className= 'map'>
-					<Map data = { viewport } />
+					<Map viewport = { viewport } />
 				</div>
 				<div className = 'parkPageContainer'>
 					<div className = 'ridesDiv'>

@@ -32,7 +32,13 @@ class Epcot extends Component {
 
 		return (
 			<div className = 'epcot'>
-				<button className ="homeButton" onClick={() => this.props.history.push('/')}>Home </button>
+				<nav className= 'navBar'>
+						<div className= 'logo'>Walt Disney World</div>
+						<div className= 'navLink'>
+							<div className ="homeButton" onClick={() => this.props.history.push('/')}>Home </div>
+							<div className ="faveButton">Favorites</div>
+						</div>	
+				</nav>
 				<div className= 'parkContainer'>
 					<div className= 'map'>
 						<Map viewport={ viewport }/>
