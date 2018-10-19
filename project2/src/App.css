@@ -11,7 +11,7 @@
 }
 
 .title {
-  font-size: 90px;
+  font-size: 70px;
   color: #c0e1d5;
   text-shadow:
      -2px -2px 0 rgba(32, 34, 98),
@@ -19,7 +19,6 @@
     -2px 2px 0 rgba(32, 34, 98),
     2px 2px 0 rgba(32, 34, 98);
   align-self: center;
-  font-family: disney;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -185,16 +184,120 @@ a {
   align-items: center;
 }
 
-.disneyParksLogo {
+/*.disneyParksLogo {
   width: 200px;
   height: 150px;
   margin: 10px 40px;
-}
+}*/
 
 .navBar {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  height: 20px;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  background-color: #07173d;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  color: white;
+  width: 100%;
+}
+
+.logo {
+  font-family: disney;
+  font-size: 40px;
+  align-items: flex-start;
+  padding-left: 15px;
   padding-top: 10px;
+}
+
+.navLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 300px;
+  padding-right: 30px;
+  font-size: 22px;
+}
+
+.homeButton, .faveButton {
+  transition: text-decoration 1s;
+}
+
+.faveButton:hover {
+  text-decoration: underline;
+}
+
+.homeButton:hover {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 400px) {
+  .homePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1539824917/1081037-beautiful-light-blue-backgrounds-1920x1080-for-1080p.jpg');
+    background-size: cover;
+  }
+
+  .navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: #07173d;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    color: white;
+    width: 100%;
+    text-shadow: none;
+  }
+
+  .logo {
+    font-family: disney;
+    font-size: 25px;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-top: 10spx;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navLink {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+    padding-right: 13px;
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 30px;
+    color: rgba(32, 34, 98);
+    align-self: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow:
+     -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+  }
+
+  .intro {
+    margin: 10px 30px;
+    font-size: 18px;
+    color: rgba(32, 34, 98);
+    text-shadow:
+     -.5px -.5px 0 white,
+    .5px -.5px 0 white,
+    -.5px .5px 0 white,
+    .5px .5px 0 white;
+    width: 85%;
+    font-weight: bold;
+  }
 }

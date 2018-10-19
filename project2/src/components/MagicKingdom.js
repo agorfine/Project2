@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RidesRow from './RidesRow'
 import RestaurantRow from './RestaurantRow'
-import MapMK from './MapMK'
+import Map from './Map'
 import Fave from './Fave'
 
 class MagicKingdom extends Component {
@@ -23,21 +23,31 @@ class MagicKingdom extends Component {
 
 		})
 
+		const viewport= {
+		   width: 600,
+		   height: 400,
+		   latitude: 28.4177,
+		   longitude: -81.5812,
+		   zoom: 16
+		  }
+
 		return (
 			<div className = 'magicKingdom'>
 				<nav className= 'navBar'>
-					<div className ="homeButton" onClick={() => this.props.history.push('/')}>Home </div>
-					<div className ="faveButton">Favorites</div>
+						<div className= 'logo'>Walt Disney World</div>
+						<div className= 'navLink'>
+							<div className ="homeButton" onClick={() => this.props.history.push('/')}>Home </div>
+							<div className ="faveButton">Favorites</div>
+						</div>	
 				</nav>
 				<div className= 'parkContainer'>
 					<div className= 'parkName'>
-						<img className='disneyParksLogo' src='https://res.cloudinary.com/drsaojfyp/image/upload/v1539830267/disney-logo-6.png' />
 						<h1>Magic Kingdom</h1>
 					</div>
 
 					<div className= 'parkHead'>
 						
-						<MapMK />
+						<Map viewport= { viewport } />
 					</div>
 
 					<div className = 'parkPageContainer'>

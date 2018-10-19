@@ -8,12 +8,12 @@ class RidesRow extends Component {
 
 		let rides = this.props.land.attractions.map((ride, i) => {
 			return <li key = {i} className= 'rideRow'>{ride.name} 
-							<Fave 
+						<Fave 
 							onFaveToggle = {this.props.onFaveToggle}
           					isFave = {() => this.props.isFave()}
           					fave={this.props.faves}
           				/>
-          		</li>
+          			</li>
 		})
 
 		return(

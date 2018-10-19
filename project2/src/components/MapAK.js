@@ -16,12 +16,12 @@ class MapEpcot extends Component {
  render() {
   return(
    <div className='map'>
-   <ReactMapGL
-    {...this.state.viewport}
-    mapStyle="mapbox://styles/mapbox/streets-v10"
-    onViewportChange={(viewport) => this.setState({viewport})}
-    mapboxApiAccessToken={MAPBOX_TOKEN}
-    />
+     <ReactMapGL
+      {...this.state.viewport}
+      mapStyle="mapbox://styles/mapbox/streets-v10"
+      onViewportChange={(viewport) => this.setState({viewport})}
+      mapboxApiAccessToken={MAPBOX_TOKEN}
+      />
     </div>
    )
  }

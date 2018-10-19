@@ -3,16 +3,11 @@ import ReactMapGL from 'react-map-gl'
 
 let MAPBOX_TOKEN = 'pk.eyJ1IjoiYWFyb25jdWxwIiwiYSI6ImNqbmRheXl1MzBjZ2Eza280eGJkNjU2ZGwifQ.roPV61S5Vnt7Eu2oKRp7ZQ'
 
-class MapEpcot extends Component {
+class Map extends Component {
  state = {
-  viewport: {
-   width: 600,
-   height: 400,
-   latitude: 28.3747,
-   longitude: -81.5494,
-   zoom: 16
-  }
+  viewport: this.props.viewport
  }
+
  render() {
   return(
    <div className='map'>
@@ -26,4 +21,4 @@ class MapEpcot extends Component {
    )
  }
 }
-export default MapEpcot
+export default Map

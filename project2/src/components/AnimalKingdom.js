@@ -1,48 +1,56 @@
 import React, { Component } from 'react';
 import RidesRow from './RidesRow'
 import RestaurantRow from './RestaurantRow'
-import MapAK from './MapAK'
+import Map from './Map'
 
-class AnimalKingdom extends Component {
+function AnimalKingdom(props) {
 
-	updateHistory () {
-		this.props.history.push('./')
+	function updateHistory () {
+		props.history.push('./')
 	}
 
-	render () {
-		const land= this.props.data ? this.props.data.orlando.parks[3]: '';
-		// console.log(rides)
 
-		const rides =land.lands.map((land, i) => {
-		return land.attractions ? <RidesRow land = {land} key = {i} onFaveToggle={() => this.props.onFaveToggle(land)} isFave = {() => this.props.faves.includes()}/> : '';
-		})
+	const land= props.data ? props.data.orlando.parks[3]: '';
+	// console.log(rides)
 
-		const restaurants =land.lands.map((land, i) => {
-		return land.dining ? <RestaurantRow land = {land} key ={i} onFaveToggle={() => this.props.onFaveToggle(land)}/> : '';
+	const rides =land.lands.map((land, i) => {
+	return land.attractions ? <RidesRow land = {land} key = {i} onFaveToggle={() => props.onFaveToggle(land)} isFave = {() => props.faves.includes()}/> : '';
+	})
 
-		})
+	const restaurants =land.lands.map((land, i) => {
+	return land.dining ? <RestaurantRow land = {land} key ={i} onFaveToggle={() => props.onFaveToggle(land)}/> : '';
 
-		return (
-			<div className = 'animalKingdom'>
-				<button className ="homeButton" onClick={() => this.props.history.push('/')}>Home </button>
-				<div className= 'parkContainer'>
-					<div className= 'map'>
-						<MapAK />
+	})
+
+	const viewport= {
+	   width: 600,
+	   height: 400,
+	   latitude: 28.3597,
+	   longitude: -81.5913,
+	   zoom: 16
+	  }
+
+	return (
+		<div className = 'animalKingdom'>
+			<button className ="homeButton" onClick={() => props.history.push('/')}>Home </button>
+			<div className= 'parkContainer'>
+				<div className= 'map'>
+					<Map data = { viewport } />
+				</div>
+				<div className = 'parkPageContainer'>
+					<div className = 'ridesDiv'>
+						<div className = 'rideTitle'> Rides</div>
+						{rides}
 					</div>
-					<div className = 'parkPageContainer'>
-						<div className = 'ridesDiv'>
-							<div className = 'rideTitle'> Rides</div>
-							{rides}
-						</div>
-						<div className = 'restaurantDiv'>
-							<div className = 'restaurantTitle'> Dining</div>
-							{restaurants}
-						</div>
+					<div className = 'restaurantDiv'>
+						<div className = 'restaurantTitle'> Dining</div>
+						{restaurants}
 					</div>
 				</div>
- 			</div>
-		)
-	}
+			</div>
+		</div>
+	)
+
 }
 
 export default AnimalKingdom;

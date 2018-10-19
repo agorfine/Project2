@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RidesRow from './RidesRow'
 import RestaurantRow from './RestaurantRow'
-import MapEpcot from './MapEpcot'
+import Map from './Map'
 
 class Epcot extends Component {
 
@@ -22,12 +22,20 @@ class Epcot extends Component {
 
 		})
 
+		const viewport= {
+			width: 600,
+			height: 400,
+			latitude: 28.3597,
+			longitude: -81.5913,
+			zoom: 16
+		}
+
 		return (
-		<div className = 'epcot'>
+			<div className = 'epcot'>
 				<button className ="homeButton" onClick={() => this.props.history.push('/')}>Home </button>
 				<div className= 'parkContainer'>
 					<div className= 'map'>
-						<MapEpcot />
+						<Map viewport={ viewport }/>
 					</div>
 					<div className = 'parkPageContainer'>
 						<div className = 'ridesDiv'>
@@ -40,7 +48,7 @@ class Epcot extends Component {
 						</div>
 					</div>
 				</div>
- 			</div>
+			</div>
 		)
 	}
 }
