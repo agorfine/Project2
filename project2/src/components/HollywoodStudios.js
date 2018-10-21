@@ -22,11 +22,11 @@ class HollywoodStudios extends Component {
 		})
 
 		const viewport= {
-		   width: 600,
-		   height: 400,
+		   width: 300,
+		   height: 200,
 		   latitude: 28.3575,
 		   longitude: -81.5583,
-		   zoom: 16
+		   zoom: 14
 		 }
 
 		return (

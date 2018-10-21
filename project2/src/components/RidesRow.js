@@ -26,7 +26,8 @@ class RidesRow extends Component {
 						{rides}
 					</ul>
 
-				</div>	
+				</div>
+	
 			
 			</div>
 		)

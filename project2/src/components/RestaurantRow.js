@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fave from './Fave'
 
 
 
@@ -8,7 +9,14 @@ class RestaurantRow extends Component {
 	render () {
 
 		let restaurants = this.props.land.dining.map((restaurant, i) => {
-			return <li key = {i}>{restaurant.name}</li>
+			return <li key = {i} className ='rideRow'>
+						{restaurant.name}
+						<Fave 
+							onFaveToggle = {this.props.onFaveToggle}
+          					isFave = {() => this.props.isFave()}
+          					fave={this.props.faves}
+          				/>
+					</li>
 		})
 
 		return(

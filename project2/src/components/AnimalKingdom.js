@@ -23,11 +23,11 @@ function AnimalKingdom(props) {
 	})
 
 	const viewport= {
-	   width: 600,
-	   height: 400,
+	   width: 300,
+	   height: 200,
 	   latitude: 28.3597,
 	   longitude: -81.5913,
-	   zoom: 16
+	   zoom: 14
 	  }
 
 	return (

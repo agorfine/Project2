@@ -7,7 +7,7 @@
   text-align: center;
   background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1539739182/Free-Backgrounds-Disney.png');
   background-size: cover;
-  height: 750px;
+  height: 815px;
 }
 
 .title {
@@ -74,7 +74,15 @@ a {
   height: 220px;
   width: 213px;
   margin: 20px 15px;
-  border-radius: 10px;
+  border-radius: 10px
+}
+
+.parkButton {
+  transition: scale 1s;
+}
+
+.parkButton:hover {
+  transform: scale(1.05);
 }
 
 .mkButton {
@@ -105,6 +113,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .rideTitle, .restaurantTitle {
@@ -115,7 +125,6 @@ a {
 .land {
   text-align: center;
   margin: 5px;
-  font-family: disney;
   font-size: 40px;
   color: #225587;
 }
@@ -123,6 +132,7 @@ a {
 .rides {
   list-style: none;
   color: #225587;
+  font-size: 18px;
 }
 
 .ridesDiv, .restaurantDiv {
@@ -162,11 +172,18 @@ a {
   margin-left: 20px;
 }
 
-.materialIcons {
+.ride-row-fave {
   background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1539828070/icons8-animation-50.png);
   background-size: contain;
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
+}
+
+.ride-row-fave.remove_from_queue {
+  background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1540160780/icons8-animation-100.png);
+  background-size: contain;
+  height: 30px;
+  width: 30px;
 }
 
 .rideRow {
@@ -182,6 +199,12 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
+}
+
+.parkTitle {
+  margin-bottom: 7px;
+  color: #07173d;
 }
 
 /*.disneyParksLogo {
@@ -236,11 +259,15 @@ a {
   .homePage {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1539824917/1081037-beautiful-light-blue-backgrounds-1920x1080-for-1080p.jpg');
+/*    background-image: url('https://res.cloudinary.com/drsaojfyp/image/upload/v1540047527/fece35e8bb883d60295965952477236c.jpg');
+    background-size: cover;*/
+    background-image: linear-gradient(to top, #82c6fc, #a5d1fd, #c2dcfe, #dbe8fe, #f1f5fe);
     background-size: cover;
+    height: auto;
+
   }
 
   .navBar {
@@ -254,6 +281,7 @@ a {
     color: white;
     width: 100%;
     text-shadow: none;
+    height: 55px;
   }
 
   .logo {
@@ -272,6 +300,7 @@ a {
     justify-content: space-between;
     width: 300px;
     padding-right: 13px;
+    padding-left: 16px;
     font-size: 16px;
   }
 
@@ -280,7 +309,8 @@ a {
     color: rgba(32, 34, 98);
     align-self: center;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-top: 30px;
     text-shadow:
      -1px -1px 0 white,
     1px -1px 0 white,
@@ -299,5 +329,133 @@ a {
     .5px .5px 0 white;
     width: 85%;
     font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
+
+  .routeButton {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15spx;
+  }
+
+  .topRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottomRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .mkButton, .epcotButton, .akButton, .hsButton {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+  }
+
+  .mkButton {
+    background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1539833337/Screen_Shot_2018-10-17_at_11.28.08_PM.png);
+    background-size: contains;
+    background-repeat: no-repeat;
+  }
+
+  .epcotButton {
+    background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1539833327/Screen_Shot_2018-10-17_at_11.27.41_PM.png);
+    background-size: contains;
+    background-repeat: no-repeat;
+  }
+
+  .akButton {
+    background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1539833323/Screen_Shot_2018-10-17_at_11.27.28_PM.png);
+    background-size: contains;
+    background-repeat: no-repeat;
+  }
+
+  .hsButton {
+    background-image: url(https://res.cloudinary.com/drsaojfyp/image/upload/v1539833343/Screen_Shot_2018-10-17_at_11.28.22_PM.png);
+    background-size: contains;
+    background-repeat: no-repeat;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+  }
+
+  .mkLink {
+    padding: 3px 24px 120px 24px;
+  }
+
+  .epcotLink {
+    padding: 3px 50px 120px 50px;
+  }
+
+  .akLink {
+    padding: 3px 20px 120px 20px;
+  }
+
+  .hsLink {
+    padding: 3px 10px 120px 10px;
+  }
+  
+  .map {
+    margin: 10px;
+    margin-left: 20px;
+  }
+  
+  .parkName {
+    color: ;
+  }
+
+  .parkPageContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .rideTitle, .restaurantTitle {
+    font-size: 25px;
+    text-align: center;
+    font-family: disney;
+    color: #225587;
+    font-size: 40px;
+    padding-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  .land {
+    text-align: center;
+    margin: 5px;
+    font-size: 20px;
+    color: #225587;
+    margin-bottom: 0;
+    text-decoration: underline;
+  }
+
+  .rides {
+    list-style: none;
+    color: #225587;
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
+  .ridesDiv, .restaurantDiv {
+    background-color: rgba(255, 255, 255, .7);
+    margin: 10px;
+    border-radius: 20px;
+    width: 175px;
+  }
+
 }

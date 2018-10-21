@@ -24,12 +24,21 @@ class MagicKingdom extends Component {
 		})
 
 		const viewport= {
-		   width: 600,
-		   height: 400,
+		   width: 300,
+		   height: 200,
 		   latitude: 28.4177,
 		   longitude: -81.5812,
-		   zoom: 16
+		   zoom: 14
 		  }
+
+		// const viewportMobile= {
+		//    width: 600,
+		//    height: 500,
+		//    latitude: 28.4177,
+		//    longitude: -81.5812,
+		//    zoom: 16
+		//   } 
+
 
 		return (
 			<div className = 'magicKingdom'>
@@ -42,7 +51,7 @@ class MagicKingdom extends Component {
 				</nav>
 				<div className= 'parkContainer'>
 					<div className= 'parkName'>
-						<h1>Magic Kingdom</h1>
+						<h1 className= 'parkTitle'>Magic Kingdom</h1>
 					</div>
 
 					<div className= 'parkHead'>

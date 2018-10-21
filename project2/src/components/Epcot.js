@@ -23,11 +23,11 @@ class Epcot extends Component {
 		})
 
 		const viewport= {
-			width: 600,
-			height: 400,
-			latitude: 28.3597,
-			longitude: -81.5913,
-			zoom: 16
+			width: 300,
+			height: 200,
+			latitude: 28.3747,
+			longitude: -81.5494,
+			zoom: 14
 		}
 
 		return (
@@ -40,6 +40,9 @@ class Epcot extends Component {
 						</div>	
 				</nav>
 				<div className= 'parkContainer'>
+					<div className= 'parkName'>
+						<h1 className= 'parkTitle'>Epcot</h1>
+					</div>
 					<div className= 'map'>
 						<Map viewport={ viewport }/>
 					</div>
