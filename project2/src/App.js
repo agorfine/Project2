@@ -8,7 +8,6 @@ import AnimalKingdom from './components/AnimalKingdom'
 import Home from './components/Home'
 import Media from "react-media";
 
-
 import './App.css';
 
 
