@@ -1,5 +1,12 @@
 # Project Overview
 
+## Project Links
+
+Below is a link to the deployed project. The project is mobile responsive, so make sure to check it out on your phone!
+
+- [Disney-Trip-Adviser](http://disney-trip.surge.sh/Epcot)
+
+
 ## Project Schedule
 
 This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
@@ -19,6 +26,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 ## Project Description
 
 This app assists users in planning their trip to Disney World. Users will be able to select a park, and then favorite rides and restaurants within it. The app layout has two main pages, the home page and the park page. The home page will introduce the website, and allow users to click on each of the four parks. Once the user clicks a park, they will be routed to that park's page. The park page will show a map of the park, and a list of rides and restaurants fetched from an API. The user will then be able to favorite rides and restaurants. The app will include a button to allow users to see their favorited items. 
+
 
 ## Wireframes
 
