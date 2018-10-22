@@ -8,6 +8,11 @@
   src: url('./fonts/waltographUI.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'header';
+  src: url('./fonts/EnchantedLand.otf') format('opentype');
+}
+
 body {
   margin: 0;
   padding: 0;

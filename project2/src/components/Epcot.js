@@ -43,7 +43,7 @@ class Epcot extends Component {
 					<div className= 'parkName'>
 						<h1 className= 'parkTitle'>Epcot</h1>
 					</div>
-					<div className= 'map'>
+					<div className= 'parkHead'>
 						<Map viewport={ viewport }/>
 					</div>
 					<div className = 'parkPageContainer'>

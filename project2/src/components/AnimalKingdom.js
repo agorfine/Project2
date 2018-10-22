@@ -41,9 +41,15 @@ function AnimalKingdom(props) {
 				</nav>
 			
 			<div className= 'parkContainer'>
-				<div className= 'map'>
+				
+				<div className= 'parkName'>
+					<h1 className= 'parkTitle'>Animal Kingdom</h1>
+				</div>
+				
+				<div className= 'parkHead'>
 					<Map viewport = { viewport } />
 				</div>
+				
 				<div className = 'parkPageContainer'>
 					<div className = 'ridesDiv'>
 						<div className = 'rideTitle'> Rides</div>

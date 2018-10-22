@@ -10,7 +10,7 @@ class RestaurantRow extends Component {
 
 		let restaurants = this.props.land.dining.map((restaurant, i) => {
 			return <li key = {i} className ='rideRow'>
-						{restaurant.name}
+						<div className = 'rideName'>{restaurant.name}</div>
 						<Fave 
 							onFaveToggle = {this.props.onFaveToggle}
           					isFave = {() => this.props.isFave()}
