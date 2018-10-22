@@ -11,18 +11,25 @@ class Epcot extends Component {
 
 	render () {
 		const land= this.props.data ? this.props.data.orlando.parks[1]: '';
-		// console.log(rides)
 
 		const rides =land.lands.map((land, i) => {
-			return land.attractions ? <RidesRow land = {land} key = {i} onFaveToggle={() => this.props.onFaveToggle(land)} isFave = {() => this.props.faves.includes()}/> : '';
+			return land.attractions ? <RidesRow 
+										land = {land} 
+										key = {i} 
+										onFaveToggle={() => this.props.onFaveToggle(land)} 
+										isFave = {() => this.props.faves.includes()}
+										/> : '';
 		})
 
 		const restaurants =land.lands.map((land, i) => {
-			return land.dining ? <RestaurantRow land = {land} key ={i} onFaveToggle={() => this.props.onFaveToggle(land)}/> : '';
-
+			return land.dining ? <RestaurantRow 
+									land = {land} 
+									key ={i} 
+									onFaveToggle={() => this.props.onFaveToggle(land)}
+									/> : '';
 		})
 
-		const viewport= {
+		const viewportMobile= {
 			width: 300,
 			height: 200,
 			latitude: 28.3747,
@@ -30,21 +37,35 @@ class Epcot extends Component {
 			zoom: 14
 		}
 
+		const viewport= {
+		   width: 600,
+		   height: 400,
+		   latitude: 28.3747,
+		   longitude: -81.5494,
+		   zoom: 16
+		  }
+
+
 		return (
 			<div className = 'epcot'>
+				
 				<nav className= 'navBar'>
-						<div className= 'logo'>Walt Disney World</div>
-						<div className= 'navLink'>
-							<div className ="homeButton" onClick={() => this.props.history.push('/')}>Home </div>
-							<div className ="faveButton">Favorites</div>
-						</div>	
+					<div className= 'logo'>Walt Disney World</div>
+					<div className= 'navLink'>
+						<div className ="homeButton" 
+							onClick={() => this.props.history.push('/')}>
+							Home 
+						</div>
+						<div className ="faveButton">Favorites</div>
+					</div>	
 				</nav>
+				
 				<div className= 'parkContainer'>
 					<div className= 'parkName'>
 						<h1 className= 'parkTitle'>Epcot</h1>
 					</div>
 					<div className= 'parkHead'>
-						<Map viewport={ viewport }/>
+						<Map viewport={ viewport } mobile = { viewportMobile }/>
 					</div>
 					<div className = 'parkPageContainer'>
 						<div className = 'ridesDiv'>
@@ -59,7 +80,9 @@ class Epcot extends Component {
 				</div>
 			</div>
 		)
-	}
+	}	
 }
+	
+
 
 export default Epcot;

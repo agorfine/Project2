@@ -34,20 +34,20 @@ class MagicKingdom extends Component {
 		})
 
 		const viewport= {
+		   width: 600,
+		   height: 400,
+		   latitude: 28.4177,
+		   longitude: -81.5812,
+		   zoom: 16
+		  }
+
+		const viewportMobile= {
 		   width: 300,
 		   height: 200,
 		   latitude: 28.4177,
 		   longitude: -81.5812,
 		   zoom: 14
-		  }
-
-		// const viewportMobile= {
-		//    width: 600,
-		//    height: 500,
-		//    latitude: 28.4177,
-		//    longitude: -81.5812,
-		//    zoom: 16
-		//   } 
+		  } 
 
 
 		return (
@@ -66,7 +66,7 @@ class MagicKingdom extends Component {
 
 					<div className= 'parkHead'>
 						
-						<Map viewport= { viewport } />
+						<Map viewport= { viewport } mobile = {viewportMobile} />
 					</div>
 
 					<div className = 'parkPageContainer'>
