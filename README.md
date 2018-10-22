@@ -94,11 +94,11 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Favorite Filter- Change State to Show Fave | H | 3hrs| hrs | 6hrs |
 | Favorite Filter- Show Rides | M | 2hrs| hrs | 0 |
 | Favorite Filter- Show Restaurants | M | 2hrs| hrs | 0 |
-| CSS & Styling- Home Page | H | 3hrs| 6hrs | 10hrs |
+| CSS & Styling- Home Page | H | 3hrs| 6hrs | 7hrs |
 | CSS & Styling- Park Page | H | 3hrs| 4hrs | 5hrs |
 | CSS & Styling- Favorite Button | M | 2hrs| hrs | 2hrs |
-| CSS & Styling- Showing Fave | H | 4hrs| hrs | 1hrs |
-| Total | H | 44hrs| hrs | 46hrs |
+| CSS & Styling- Showing Fave | H | 4hrs| hrs | 30min |
+| Total | H | 44hrs| hrs | 42.30hrs |
 
 ## Helper Functions
 Helper functions should be generic enought that they can be reused in other applications. Use this section to document all helper functions that fall into this category.
