@@ -4,7 +4,7 @@
 
 Below is a link to the deployed project. The project is mobile responsive, so make sure to check it out on your phone!
 
-- [Disney-Trip-Adviser](http://disney-trip.surge.sh/Epcot)
+- [Disney-Trip-Adviser](http://disney-trip.surge.sh)
 
 
 ## Project Schedule
