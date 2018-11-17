@@ -52,10 +52,7 @@ class App extends Component {
     return (
       <div>
         <main>
-          <nav>
-
-          </nav>
-          
+         
           <Switch>
            
             <Route path ="/MagicKingdom" render = {(props) => <MagicKingdom {...props} data={this.state.result} onFaveToggle = {(ride) => this.handleFaveToggle(ride)} isFave = {() => this.props.faves.includes()} fave={this.state.faves}/>} />
